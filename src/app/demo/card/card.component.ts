@@ -5,7 +5,8 @@ import { Component,OnInit } from '@angular/core';
 
 @Component({
   selector: 'demo-card',
-  templateUrl: './card.component.html'
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.css']
 })
 export class CardComponent {
   titles : any[] = [{text:'成功！很好地完成了提交。',type: 'success'},
