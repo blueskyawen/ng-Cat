@@ -12,6 +12,8 @@
   background: #000080;
   display: flex;
   flex-direction: row;
+  box-shadow: 0 2px 8px #4d4dff;
+  z-index: 10;
 }
 .main-app header .app-icon {
   width: 20%;
@@ -80,6 +82,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  padding-top: 5px;
 }
 .main-app article .side-bars {
   width: 20%;
