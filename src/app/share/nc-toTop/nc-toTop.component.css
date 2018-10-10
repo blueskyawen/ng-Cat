@@ -1,29 +1,21 @@
-#backTop1{
-  margin-left:50px;
-}
-#backTop{
+.nc-backTop{
   position:fixed;
   bottom:10%;
   right:10%;
   display:none;
 }
-#backTop:hover{
+.nc-backTop-rocket:hover{
   cursor:pointer;
   transform: translateY(5px);
   transition: transform .2s;
 }
-
-#backTop:hover div:not(.body-mark),
-#backTop:hover .rocket-body:before{
-//box-shadow:1px -1px 1px 1px #8c8c8c,-1px -1px 1px 1px #8c8c8c;
-}
-.rocket-body{
+.nc-backTop-rocket .rocket-body{
   height:40px;
   width:30px;
   background:#ccc;
   position:relative;
 }
-.rocket-body:before{
+.nc-backTop-rocket .rocket-body:before{
   content:"";
   height:30px;
   width:30px;
@@ -33,7 +25,7 @@
   top:-30px;
   border-radius:15px 15px 0 0/30px 30px 0 0;
 }
-.body-mark{
+.nc-backTop-rocket .body-mark{
   height:16px;
   width:16px;
   display:inline-block;
@@ -44,10 +36,10 @@
   top:10px;
   left:5px;
 }
-#backTop:hover .body-mark{
+.nc-backTop-rocket:hover .body-mark{
   background:linear-gradient(45deg,#208000,#79ff4d);
 }
-.rocket-body:after{
+.nc-backTop-rocket .rocket-body:after{
   content:"";
   height:16px;
   width:12px;
@@ -59,7 +51,7 @@
   left:9px;
   box-shadow: -1px -2px 5px 6px #ff4d4d,1px 2px 5px 6px #ff4d4d;
 }
-.rocket-left{
+.nc-backTop-rocket .rocket-left{
   height:30px;
   width:16px;
   display:inline-block;
@@ -69,7 +61,7 @@
   left:-16px;
   border-radius:16px 0 16px 0 / 30px 0 10px 0;
 }
-.rocket-right{
+.nc-backTop-rocket .rocket-right{
   height:30px;
   width:16px;
   display:inline-block;
@@ -78,4 +70,47 @@
   top:20px;
   right:-16px;
   border-radius:0 16px 0 16px/0 30px 0 10px;
+}
+
+.nc-backTop-circle {
+  height:50px;
+  width:50px;
+  background:#b3b3b3;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
+.nc-backTop-circle:hover {
+  background:#595959;
+  cursor:pointer;
+}
+.nc-backTop-circle .nc-backTop-body {
+  width:40%;
+  display:flex;
+  flex-direction:column;
+}
+.nc-backTop-circle .nc-backTop-body .nc-back-head {
+  width:100%;
+  height:4px;
+  background:#fff;
+}
+.nc-backTop-circle .nc-backTop-body .nc-back-content {
+  display:inline-block;
+  width:0;
+  height:0;
+  border:solid 8px;
+  border-color:transparent transparent #fff transparent;
+  position:relative;
+  left:2px;
+  top:-6px;
+}
+.nc-backTop-circle .nc-backTop-body .nc-back-content:after {
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:10px;
+  background:#fff;
+  position:absolute;
+  left:-3px;
+  top:8px;
 }

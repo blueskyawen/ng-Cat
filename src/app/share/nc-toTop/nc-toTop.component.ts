@@ -8,16 +8,24 @@ import { Component,OnInit,Input,Output,EventEmitter,OnChanges,SimpleChanges } fr
   templateUrl: './nc-toTop.component.html',
   styleUrls: ['./nc-toTop.component.css']
 })
-export class NcToTopComponent {
+export class NcToTopComponent implements OnInit {
+  @Input() type : string = 'circle';
+  typeClasses : any = {};
   timer : any = null;
+  displayType : string;
 
   constructor() {
-    window.onscroll = function () {
+  }
+
+  ngOnInit() {
+    this.displayType = this.type === 'circle' ? 'flex' : 'block';
+    this.typeClasses = {'nc-backTop-circle': this.type === 'circle','nc-backTop-rocket': this.type === 'rocket'};
+    window.onscroll = () => {
       var backtop = window.pageYOffset;
       if(backtop > 0){
-        document.getElementById("backTop").style.display = "block";
+        document.getElementById("nc-backTopz").style.display = this.displayType;
       } else {
-        document.getElementById("backTop").style.display = "none";
+        document.getElementById("nc-backTopz").style.display = "none";
       }
     };
   }
@@ -29,6 +37,6 @@ export class NcToTopComponent {
       if(backtop < 1){
         clearInterval(this.timer);
       }
-    },60);
+    },100);
   }
 }

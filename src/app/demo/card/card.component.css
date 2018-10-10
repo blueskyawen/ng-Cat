@@ -32,8 +32,8 @@
     display:flex;
 }
 .default-card .card-content .card-img {
-    width:40%;
-    height:160px;
+    //width:40%;
+    //height:160px;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -41,8 +41,8 @@
     box-sizing:border-box;
 }
 .default-card .card-content .card-img img {
-    height:80%;
-    width:80%;
+    //height:80%;
+    width:100%;
 }
 .default-card .card-content .card-description {
     display:flex;

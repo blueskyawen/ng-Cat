@@ -7,6 +7,26 @@
   <div *ngIf="currentTab === 'html'">
     <textarea style="height:80px;">
       <nc-toTop></nc-toTop>
+
+      <nc-toTop [type]="'rocket'"></nc-toTop>
     </textarea>
   </div>
 </nc-tab>
+
+<h3>参数</h3>
+<table>
+  <thead>
+  <tr>
+    <th>参数</th>
+    <th>说明</th>
+    <th>默认值</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>type</td>
+    <td>现状或类型;rocket/circle</td>
+    <td>circle</td>
+  </tr>
+  </tbody>
+</table>
